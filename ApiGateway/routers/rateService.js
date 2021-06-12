@@ -12,6 +12,29 @@ router.post('/api/rate', (req, res) => {
     })
 })
 
+router.post('/api/rate/arr', (req, res) => {
+    api.post(req.path, req.body).then(resp => {
+        res.send(resp.data);
+    })
+})
+
+router.post('/api/rate/get', (req, res) => {
+    api.post(req.path, req.body, req.params).then(resp => {
+        res.send(resp.data);
+    })
+})
+
+router.post('/api/rate/delete', (req, res) => {
+    api.post(req.path, req.body).then(resp => {
+        res.send(resp.data);
+    })
+})
+
+router.post('/api/rate/update/label', (req, res) => {
+    api.post(req.path, req.body).then(resp => {
+        res.send(resp.data);
+    })
+})
 
 
 module.exports = router
